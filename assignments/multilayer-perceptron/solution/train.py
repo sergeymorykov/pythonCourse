@@ -22,7 +22,7 @@ def init_weights(sizes):
 # Обратное распространение
 def backward_pass(activations, y, weights, learning_rate):
     deltas = [None] * len(weights)
-    deltas[-1] = activations[-1] - y  # softmax + CCE => delta = y_pred - y_true
+    deltas[-1] = activations[-1] - y
 
     # Распространение ошибки назад
     for l in range(len(weights)-2, -1, -1):
